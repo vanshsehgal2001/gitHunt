@@ -6,7 +6,7 @@ const About = () => {
             <h1>About Page</h1>
             <h3>About Page Body</h3>
             <h5>About Page Footer</h5>
-       </Fragment>
+        </Fragment>
     )
 }
 

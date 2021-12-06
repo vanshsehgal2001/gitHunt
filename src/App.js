@@ -1,7 +1,5 @@
-import React,{Fragment, useState} from 'react';
+import React,{Fragment} from 'react';
 import './App.css';
-// import { func } from 'prop-types';
-// import axios from 'axios'
 import Navbar from './components/layout/Navbar'
 import Users from "./components/users/Users"
 import Search from "./components/users/Search"
@@ -13,7 +11,6 @@ import GithubState from './components/context/github/GithubState';
 import AlertState from './components/context/alert/AlertState'
 import NotFound from './components/pages/NotFound';
 
-//CLASS-BASED COMPONENT
 
 const App = () =>{
   
@@ -49,13 +46,3 @@ const App = () =>{
 
 
 export default App;
-
-
-
-
-// async componentDidMount(){
-
-  //   this.setState({loading:true})
-  //   const response=await axios.get(`https://api.github.com/users?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`)
-  //   this.setState({ users:response.data, loading:false})
-  // }

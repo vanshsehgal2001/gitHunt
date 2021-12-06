@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-// import PropTypes from 'prop-types'
 import GithubContext from '../context/github/GithubContext'
 import AlertContext from '../context/alert/AlertContext'
 
@@ -12,6 +11,7 @@ const Search = ({showClear,showAlert,clearUsers})=> {
     
 
     const onChange= e => {
+        console.log(e.target.value)
         setText(e.target.value)
     }
 
@@ -47,10 +47,5 @@ const Search = ({showClear,showAlert,clearUsers})=> {
             </div>
         )
 }
-
-// Search.propTypes={
-//         showClear:PropTypes.bool.isRequired,
-//         clearUsers:PropTypes.func.isRequired,
-//     }
 
 export default Search

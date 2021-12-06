@@ -1,6 +1,5 @@
 import React, {  Fragment,useEffect, useContext } from 'react'
 import Spinner from '../layout/spinner'
-import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 import Repos from '../repos/Repos'
 import GithubContext from '../context/github/GithubContext'
@@ -13,8 +12,7 @@ const User= ({match}) => {
         githubContext.getUser(match.params.login)
         githubContext.getUserRepos(match.params.login)
         //eslint-disable-next-line
-    },[]) //THIS EMPTY BRACKET IS NECESSARY SO AS TO AVOID INFINITE CALLS AS USE EFFECT HOOK WORKS 
-            //DIFFERENTLY FROM COMPONENTDIDMOUNT. IT GETS RE-INVOKED AS SOON AS ANY STATE INSIDE IT CHANGES
+    },[])
 
         const {
             name,
@@ -57,7 +55,7 @@ const User= ({match}) => {
                         <h2>Bio</h2>
                         <h4>{bio}</h4>
                         </Fragment>}
-                    <a href={html_url} className="btn btn-dark my-1">
+                    <a target="_blank" rel="noopener noreferrer" href={html_url} className="btn btn-dark my-1">
                         Visit Profile..
                     </a>
                     <ul>
@@ -91,12 +89,4 @@ const User= ({match}) => {
             </Fragment>
         )
     }
-
-// User.propTypes={
-//         // loading: PropTypes.bool.isRequired,
-//         // getUser: PropTypes.func.isRequired,
-//         // user: PropTypes.object.isRequired,
-//         // getUserRepos: PropTypes.func.isRequired,
-//     }
-
 export default User

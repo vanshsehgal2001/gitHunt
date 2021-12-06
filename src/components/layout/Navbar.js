@@ -15,14 +15,9 @@ const Navbar = ({icon,title}) => {
                 </h1>
                 <ul>
                     <li>
-                        {/* IF WE HAVE SOME STATE LETS SAY WE HAD SOME SEARCH FOR GIT PROFILES AND THEN 
-                        IF WE USE a TAG AND CLICK ABOUT AND THEN GO BACK THEN OUR STATE WOULD HAVE GONE
-                        SO TO RETAIN THOSE RESULTS Link IS USED */}
-                        {/* <a href="/">Home</a> */} 
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        {/* <a href="/about">About</a> */}
                         <Link to="/about">About</Link>
                     </li>
                 </ul>
